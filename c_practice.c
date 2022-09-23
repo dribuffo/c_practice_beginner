@@ -1,0 +1,5 @@
+/*
+
+This is my practice file for practicing the basics of C programming.
+
+*/
