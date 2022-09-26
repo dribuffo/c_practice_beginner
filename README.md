@@ -22,3 +22,9 @@ Currently implemented is converting FFXI's gil standard to FFXIV's gil, but plan
  ```
  Then run the file with the ./a.out command in your terminal.
  </p>
+
+ ### DSA folder
+ <p> This folder has been created to add files related to DSA practice. </p>
+
+ ###### Algo Practice
+ <p> Algo practice file for practicing sorting algos. Will add the algos one at a time to the main file to start. Eventually I will pull them out into a library and import that into main. </p>
