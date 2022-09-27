@@ -24,6 +24,26 @@ void bubbleSort(int a[], int length)
 
 
 //selection sort
+void selectionSort(int a[], int length)
+{
+    for(int i = 0; i < length - 1; i++)
+    {
+        //creating new variable to store lowest number
+        int min_pos = i;
+        //loop through and then check 
+        for (int j = i + 1; j < length; j++)
+            if(a[j] < a[min_pos]) min_pos = j;
+
+        //swap if neccessary
+        if(min_pos != i)
+        {
+            int temp = a[i];
+            a[i] = a[min_pos];
+            a[min_pos] = temp;
+        }
+    }
+}
+
 //insertion sort
 void insertionSort(int a[], int length)
 {
