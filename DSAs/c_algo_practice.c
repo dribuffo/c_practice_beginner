@@ -5,6 +5,24 @@
 #include <stdio.h>
 
 //bubble sort
+void bubbleSort(int a[], int length)
+{
+    //outer loop => number of passes of the array
+    for (int i = 0; i < length; i++)
+    {                            //adding -i lets us avoid making checks on already sorted parts of the array
+        for(int j = 0; j < (length - 1 - i); j++) //inner loop => doing the comparison and swapping elements, stopping at one short of the index for final comparison
+        {
+            if(a[j] > a[j + 1]) //comparing index with next index
+            {
+                int temp = a[j]; //creating temp and storing current index there
+                a[j] = a[j + 1]; //assigning current index to value of next index aka swapping
+                a[j + 1] = temp; //replacing swapped index with the stored value
+            }
+        }
+    }
+}
+
+
 //selection sort
 //insertion sort
 void insertionSort(int a[], int length)
@@ -37,8 +55,9 @@ void insertionSort(int a[], int length)
 void printArray(int a[], int size)
 {
     for(int i = 0; i < 8; i++){
-        printf("a[%d] = %d", i, a[i]);
+        printf("%d ", a[i]);
     }
+    printf("\n");
 }
 
 int main()
@@ -46,9 +65,11 @@ int main()
     int a[] = {8, 4, 9, 5, 7, 6, 3, 2};
     printf("Here is your starting array: ");
     printArray(a, 8);
+    printf("\n"); //for making the two lines easier to read
 
-    printf("Here us your array after insertion sort:");
-    insertionSort(a, 8);
+
+    printf("Here us your array after being sorted: ");
+    bubbleSort(a, 8);
     printArray(a, 8);
 
     return 0;
